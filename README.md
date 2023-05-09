@@ -17,6 +17,7 @@ ImageSorter/
 |   |   |   |   |   |   |   |   |-- ThreadPoolExecutorFactory.java
 |   |   |   |   |   |   |   |-- ui/
 |   |   |   |   |   |   |   |   |-- ImageSorterUI.java
+|   |   |   |   |   |   |   |   |-- MainWindow.java
 |   |   |   |   |   |   |   |-- util/
 |   |   |   |   |   |   |   |   |-- ImageSorterUtil.java
 |   |-- test/
@@ -58,7 +59,9 @@ ImageSorter/
 
     * ***ui/*** - pakiet zawierający klasę interfejsu użytkownika
 
-        * ***ImageSorterUI.java*** - klasa interfejsu użytkownika z interfejsem okienkowym
+        * ***ImageSorterUI.java*** - klasa interfejsu generująca interfejs okna 
+        * ***MainWindow.java*** - klasa z definicją interfejsu okienkowego
+
 
     * ***util/*** - pakiet zawierający klasę funkcji pomocniczych
 
