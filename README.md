@@ -8,6 +8,7 @@ ImageSorter/
 |   |   |   |   |-- wit/
 |   |   |   |   |   |-- projekt/
 |   |   |   |   |   |   |-- imagesorter/
+|   |   |   |   |   |   |   |-- App.java
 |   |   |   |   |   |   |   |-- controller/
 |   |   |   |   |   |   |   |   |-- ImageSorterController.java
 |   |   |   |   |   |   |   |-- model/
@@ -16,7 +17,6 @@ ImageSorter/
 |   |   |   |   |   |   |   |   |-- ImageCopyTask.java
 |   |   |   |   |   |   |   |   |-- ThreadPoolExecutorFactory.java
 |   |   |   |   |   |   |   |-- ui/
-|   |   |   |   |   |   |   |   |-- ImageSorterUI.java
 |   |   |   |   |   |   |   |   |-- MainWindow.java
 |   |   |   |   |   |   |   |-- util/
 |   |   |   |   |   |   |   |   |-- ImageSorterUtil.java
@@ -43,6 +43,8 @@ ImageSorter/
 
 * ***src/test/java/pl/wit/projekt/imagesorter/*** - folder zawierający pliki testowe projektu
 
+    * ***App.java*** - klasa zawierająca funkcję main aplikacji 
+
     * ***controller/*** - pakiet zawierający kontroler
 
         * ***ImageSorterController.java*** - klasa kontrolera odpowiedzialna za zarządzanie aplikacją
@@ -59,7 +61,6 @@ ImageSorter/
 
     * ***ui/*** - pakiet zawierający klasę interfejsu użytkownika
 
-        * ***ImageSorterUI.java*** - klasa interfejsu generująca interfejs okna 
         * ***MainWindow.java*** - klasa z definicją interfejsu okienkowego
 
 
