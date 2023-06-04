@@ -15,11 +15,10 @@ ImageSorter/
 |   |   |   |   |   |   |   |   |-- ImageFile.java
 |   |   |   |   |   |   |   |-- thread/
 |   |   |   |   |   |   |   |   |-- ImageCopyTask.java
-|   |   |   |   |   |   |   |   |-- ThreadPoolExecutorFactory.java
 |   |   |   |   |   |   |   |-- ui/
 |   |   |   |   |   |   |   |   |-- MainWindow.java
 |   |   |   |   |   |   |   |-- util/
-|   |   |   |   |   |   |   |   |-- ImageSorterUtil.java
+|   |   |   |   |   |   |   |   |-- FileUtils.java
 |   |-- test/
 |   |   |-- java/
 |   |   |   |-- pl/
@@ -33,7 +32,7 @@ ImageSorter/
 |   |   |   |   |   |   |   |-- thread/
 |   |   |   |   |   |   |   |   |-- ImageCopyTaskTest.java
 |   |   |   |   |   |   |   |-- util/
-|   |   |   |   |   |   |   |   |-- ImageSorterUtilTest.java
+|   |   |   |   |   |   |   |   |-- FileUtilsTest.java
 |-- pom.xml
 |-- README.md
 ```
@@ -57,7 +56,6 @@ ImageSorter/
 
         * ***ImageCopyTask.java*** - klasa odpowiedzialna za kopiowanie plików w oddzielnych wątkach
 
-        * ***ThreadPoolExecutorFactory.java*** - klasa odpowiedzialna za tworzenie puli wątków
 
     * ***ui/*** - pakiet zawierający klasę interfejsu użytkownika
 
@@ -66,4 +64,4 @@ ImageSorter/
 
     * ***util/*** - pakiet zawierający klasę funkcji pomocniczych
 
-        * ***ImageSorterUtil.java*** - klasa z funkcjami pomocniczymi 
+        * ***FileUtils.java*** - klasa z funkcjami pomocniczymi do klasy File 

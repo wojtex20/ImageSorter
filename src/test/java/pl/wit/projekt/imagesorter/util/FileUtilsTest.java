@@ -7,12 +7,12 @@ package pl.wit.projekt.imagesorter.util;
  * @author 
  *
  */
-public class ImageSorterUtil {
+public class FileUtilsTest {
 
 	/**
 	 * 
 	 */
-	public ImageSorterUtil() {
+	public FileUtilsTest() {
 		// TODO Auto-generated constructor stub
 	}
 
