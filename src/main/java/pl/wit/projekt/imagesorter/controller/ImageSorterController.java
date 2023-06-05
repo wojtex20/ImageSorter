@@ -5,7 +5,6 @@ import pl.wit.projekt.imagesorter.thread.ImageCopyTask;
 import pl.wit.projekt.imagesorter.util.FileUtils;
 
 import java.io.File;
-import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -79,7 +78,13 @@ public class ImageSorterController {
             executorService.execute(copyTask);
         }
 
-        //Zaniechaj przyjmowanie nowych zadań, ale zaczekaj na już działające
+        //Wyswietl komunikat zakonczenia pracy
+        String message = "Sorting completed. Total files copied: " + totalFiles;
+        JOptionPane.showMessageDialog(null, message, "Sorting Completed", JOptionPane.INFORMATION_MESSAGE);
+    }
+    
+    public void stopExecutorService() {
+    	//Zaniechaj przyjmowanie nowych zadań, ale zaczekaj na już działające
         executorService.shutdown();
         try {
         	//Wymuś zatrzymanie zadań po przekroczeniu limitu
@@ -89,16 +94,12 @@ public class ImageSorterController {
         } catch (InterruptedException e) {
             executorService.shutdownNow();
         }
-
-        //Wyswietl komunikat zakonczenia pracy
-        String message = "Sorting completed. Total files copied: " + totalFiles;
-        JOptionPane.showMessageDialog(null, message, "Sorting Completed", JOptionPane.INFORMATION_MESSAGE);
     }
     
     /***
      * Pobiera string z datą i czasem i usuwa z niego czas 
      * @param dateTimeString  (w formacie 2023-06-02T14:30:00)
-     * @return sama data (w formacie 2023-06-02)
+     * @return string z samą datą (w formacie 2023-06-02)
      */
     private String ConvertDateTimeStringToDateString(String dateTimeString)
     {
