@@ -14,7 +14,9 @@ import java.util.concurrent.TimeUnit;
 import javax.swing.JOptionPane;
 
 /**
- * Klasa kontrolera aplikacji Image Sorter.
+ * Klasa kontrolera aplikacji, odpowiada za utworzenie obiektów typu ImageFile z folderu podanego przez użytkonika jako źródło
+ * oraz skopiowanie do podfolderów utworzonych na podstawie daty utworzenia zdjęcia. 
+ * 
  */
 public class ImageSorterController {
     private ExecutorService executorService;
@@ -29,7 +31,7 @@ public class ImageSorterController {
     }
 
     /**
-     * Metoda rozpoczynająca sortowanie plików.
+     * Metoda kopiujca zdjęcia do folderu docelowego, odpowiada za utworzenie podfolderów, sortowanie plików i wywołąnie zadania kopiowania.
      *
      * @param sourceDirectory      katalog źródłowy
      * @param destinationDirectory katalog docelowy
@@ -83,6 +85,9 @@ public class ImageSorterController {
         JOptionPane.showMessageDialog(null, message, "Sorting Completed", JOptionPane.INFORMATION_MESSAGE);
     }
     
+    /***
+     * Klasa która odpowiada za zamknięcie egzekutora, przed zamknięciem aplikacji
+     */
     public void stopExecutorService() {
     	//Zaniechaj przyjmowanie nowych zadań, ale zaczekaj na już działające
         executorService.shutdown();
@@ -97,7 +102,7 @@ public class ImageSorterController {
     }
     
     /***
-     * Pobiera string z datą i czasem i usuwa z niego czas 
+     * Metoda pomocnicza, pobiera string z datą i czasem i usuwa z niego czas. 
      * @param dateTimeString  (w formacie 2023-06-02T14:30:00)
      * @return string z samą datą (w formacie 2023-06-02)
      */

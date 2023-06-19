@@ -5,7 +5,7 @@ import java.io.File;
 import pl.wit.projekt.imagesorter.util.FileUtils;
 
 /**
- * Klasa reprezentująca plik obrazu.
+ * Klasa reprezentująca pojedyńczy plik obrazu
  */
 public class ImageFile {
     private File file;
