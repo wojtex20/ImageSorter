@@ -1,8 +1,8 @@
 /**
- * 
+ * Paczka zawierajaca klasy implementujace interfejs runnable
  */
 /**
- * @author WTK-praca
+ * @author Hubert Pleński
  *
  */
 package pl.wit.projekt.imagesorter.thread;

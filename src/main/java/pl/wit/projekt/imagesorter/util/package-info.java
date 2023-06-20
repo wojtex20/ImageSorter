@@ -1,8 +1,8 @@
 /**
- * 
+ * Klasa zawierajaca narzędzia 
  */
 /**
- * @author WTK-praca
+ * @author Łukasz Terlikowski
  *
  */
 package pl.wit.projekt.imagesorter.util;

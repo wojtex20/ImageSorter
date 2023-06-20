@@ -8,6 +8,7 @@ import java.nio.file.StandardCopyOption;
 
 /**
  * Klasa reprezentująca zadanie kopiowania pliku obrazu.
+ * @author Hubert Pleński
  */
 public class ImageCopyTask implements Runnable {
     private ImageFile imageFile;

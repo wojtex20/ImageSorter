@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 /**
  * Klasa kontrolera aplikacji, odpowiada za utworzenie obiektów typu ImageFile z folderu podanego przez użytkonika jako źródło
  * oraz skopiowanie do podfolderów utworzonych na podstawie daty utworzenia zdjęcia. 
- * 
+ * @author Monika Wolska
  */
 public class ImageSorterController {
     private ExecutorService executorService;

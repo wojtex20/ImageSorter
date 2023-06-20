@@ -2,7 +2,7 @@
  * Paczka zawierajaca model 
  */
 /**
- * @author Wojciech Kwiatkowski
+ * @author Patryk Matysiak
  *
  */
 package pl.wit.projekt.imagesorter.model;

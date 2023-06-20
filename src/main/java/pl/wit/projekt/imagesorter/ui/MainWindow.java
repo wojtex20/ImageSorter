@@ -12,9 +12,14 @@ import java.io.File;
 
 /**
  * Klasa reprezentująca główne okno aplikacji.
+ * @author Wojciech Kwiatkowski
  */
 public class MainWindow extends JFrame {
-    private ImageSorterController controller;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private ImageSorterController controller;
     private JTextField sourceDirectoryField;
     private JTextField destinationDirectoryField;
     private JButton startButton;

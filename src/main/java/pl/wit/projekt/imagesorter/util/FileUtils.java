@@ -12,9 +12,15 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.text.SimpleDateFormat;
+import com.drew.imaging.ImageMetadataReader;
+import com.drew.imaging.ImageProcessingException;
+import com.drew.metadata.Metadata;
+import com.drew.metadata.exif.ExifSubIFDDirectory;
 
 /**
- * Klasa narzędziowa ImageSorterUtil.
+ * Klasa narzędziowa zawierajaca metody pomocne w pracy z obiektami typu File i ImageFile.
+ * @author Łukasz Terlikowski
  */
 public class FileUtils {
     /**
@@ -103,17 +109,25 @@ public class FileUtils {
     }
     
     /***
-     * Metoda konwertuje obiekt typu file na obiekt typu ImageFile
+     * Metoda odczytuje datę utworzenia z danych exif, jesli nie zawiera odczytuje date utworzenia pliku w systemie plików
      * @param obiekt typu file
      * @return obiekt typu ImageFile
      */
     public static String readCreationDate(File file) {
         try {
-            Path filePath = file.toPath();
-            FileTime creationTime = (FileTime) Files.getAttribute(filePath, "creationTime");
-            String creationDate = creationTime.toString();
+        	String creationDate;
+            Metadata metadata = ImageMetadataReader.readMetadata(file);
+            ExifSubIFDDirectory directory = metadata.getFirstDirectoryOfType(ExifSubIFDDirectory.class);
+            if (directory != null) {
+            	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+            	creationDate = formatter.format(directory.getDate(ExifSubIFDDirectory.TAG_DATETIME_ORIGINAL));
+            }else {
+	            Path filePath = file.toPath();
+	            FileTime creationTime = (FileTime) Files.getAttribute(filePath, "creationTime");
+	            creationDate = creationTime.toString();
+            }
             return creationDate;
-        } catch (IOException e) {
+        } catch (IOException | ImageProcessingException e) {
             throw new RuntimeException("Error occurred trying to read creationTime of "+file.getName(), e);
         }
     }

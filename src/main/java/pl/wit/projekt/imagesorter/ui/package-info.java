@@ -1,8 +1,8 @@
 /**
- * 
+ * Paczka zawierajaca interfejs użytkownika
  */
 /**
- * @author WTK-praca
+ * @author Wojciech Kwiatkowski
  *
  */
 package pl.wit.projekt.imagesorter.ui;

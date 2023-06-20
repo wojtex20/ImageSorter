@@ -6,6 +6,7 @@ import pl.wit.projekt.imagesorter.util.FileUtils;
 
 /**
  * Klasa reprezentująca pojedyńczy plik obrazu
+ * @author Patryk Matysiak
  */
 public class ImageFile {
     private File file;

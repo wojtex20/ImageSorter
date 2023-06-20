@@ -2,7 +2,7 @@
  *  Paczka zawierajaca kontroler aplikacji
  */
 /**
- * @author Wojciech Kwiatkowski
+ * @author Monika Wolska
  *
  */
 package pl.wit.projekt.imagesorter.controller;
